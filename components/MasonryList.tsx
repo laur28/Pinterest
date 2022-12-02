@@ -13,7 +13,7 @@ interface IMasonryList{
 const MasonryList = ({ pins }: IMasonryList) =>  { 
     return(
 
-        <ScrollView>
+        <ScrollView contentContainerStyle={{width:'100%'}}>
         <View style={styles.container}>
           {/* 1st column */}
           <View style={styles.column}>

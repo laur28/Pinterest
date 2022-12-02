@@ -19,6 +19,7 @@ import TabTwoScreen from '../screens/ProfileScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 import PinScreen from '../screens/PinScreen';
+import CreatePinScreen from '../screens/CreatePinScreen';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -82,7 +83,7 @@ function BottomTabNavigator() {
       />
         <BottomTab.Screen
         name="CreatePin"
-        component={TabOneScreen}
+        component={CreatePinScreen}
         options={{
           title: 'Home',
           tabBarIcon: ({ color }) => ( <FontAwesome name="plus" size={30} color={color}/>),
@@ -98,14 +99,4 @@ function BottomTabNavigator() {
       />
     </BottomTab.Navigator>
   );
-}
-
-/**
- * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
- */
-function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>['name'];
-  color: string;
-}) {
-  return <FontAwesome size={30} style={{ marginBottom: -3 }} {...props} />;
 }
